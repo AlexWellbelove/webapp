@@ -1,0 +1,21 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "web server application",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexWellbelove/webapp.git"
+  },
+  "author": "863564\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[DUP863564",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexWellbelove/webapp/issues"
+  },
+  "homepage": "https://github.com/AlexWellbelove/webapp#readme"
+}
