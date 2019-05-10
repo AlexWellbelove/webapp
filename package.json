@@ -12,7 +12,7 @@
     "start": "concurrently \"npm run open\" \"npm run initsql\"",
     "open": "concurrently \"http-server -a localhost -p 8080\" \"opener http://localhost:8080/index.html\"",
     "test": "test",
-    "initsql": "sql_init.sql"
+    "initsql": "mysql -u root -p < sql_init.sql"
   },
   "repository": {
     "type": "git",
