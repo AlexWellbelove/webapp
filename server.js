@@ -41,49 +41,47 @@ function previewFiles() {
   }
 }
 
-function send(){
+function send() {
   var form = document.getElementById('uploadform');
   var fileSelect = document.getElementById('browse');
   var uploadButton = document.getElementById('submit');
 
-    if(form){
+  if (form) {
     form.addEventListener("submit", event, false);
 
-      event.preventDefault();
-      // Update button text.
-      uploadButton.innerHTML = 'Uploading...';
-      var files = fileSelect.files;
-      var formData = new FormData();
-      // Loop through each of the selected files.
-      for (var i = 0; i < files.length; i++) {
-        var file = files[i];
+    event.preventDefault();
+    // Update button text.
+    uploadButton.innerHTML = 'Uploading...';
+    var files = fileSelect.files;
+    var formData = new FormData();
+    // Loop through each of the selected files.
+    for (var i = 0; i < files.length; i++) {
+      var file = files[i];
 
-        // Check the file type.
-        if (!file.type.match('image.*')) {
-          continue;
-        }
-        // Add the file to the request.
-        formData.append('photos[]', file, file.name);
+      // Check the file type.
+      if (!file.type.match('image.*')) {
+        continue;
       }
-      formData.append(name, file);
-      var xhr = new XMLHttpRequest();
-      xhr.open('POST', 'handler.php', true);
-      //fuckup occurs here
-      xhr.onload = function () {
-
-        console.log("got here");
-        if (xhr.status === 200) {
-
-
-      // File(s) uploaded.
-        uploadButton.innerHTML = 'Upload';
-        } else {
-          alert('An error occurred!');
+      // Add the file to the request.
+      formData.append('photos[]', file, file.name);
     }
+    formData.append(name, file);
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'handler.php', true);
+
+    xhr.onload = function() {
+
+
+      if (xhr.status === 200) {
+
+
+        // File(s) uploaded.
+        uploadButton.innerHTML = 'Upload';
+      } else {
+        alert('An error occurred!');
+      }
     }
     xhr.send(formData);
-    console.log("worked");
-  };
-  }
 
-      // The rest of the code will go here...
+  };
+}
