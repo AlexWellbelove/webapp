@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Unattended Display Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dropzone.css">
+  <script type="text/javascript" src="server.js"></script>
+  <script src="dropzone.js"></script>
+</head>
+
+<body>
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a class="active" href="upload.html">Upload</a>
+    <a href="#page2">Page2</a>
+    <a href="#page3">Page3</a>
+  </nav>
+
+  <main>
+    <h1>Upload</h1>
+    <h2>This page will allow the user to upload images for the display.</h2>
+    <form action="/file-upload" class = "dropzone" id="uploader">
+    </form>
+  </main>
