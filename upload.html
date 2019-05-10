@@ -19,9 +19,11 @@
   <main>
     <h1>Upload</h1>
     <h2>This page will allow the user to upload images for the display.</h2>
-    <form>
+    <form id = "uploadform">
       <input id="browse" type="file" name="browse" class="fileinput" onchange="previewFiles()" multiple>
       <label for="browse">Choose files to upload</label>
       <div id="preview"></div>
+    </input>
+    <button type="submit" id="submit">Submit</button>
     </form>
   </main>

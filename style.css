@@ -70,8 +70,26 @@ main{
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .fileinput + label:hover{
+  background-color: #9c24f2;
+}
+
+#submit{
+    background-color: #333333;
+    border:none;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#submit:hover{
   background-color: #9c24f2;
 }
